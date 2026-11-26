@@ -1,0 +1,5 @@
+{
+  "_": "Layer rule as DATA, same shape and same intent as ui-kit's. One direction, no exceptions. `prefix` knows what the class stem is; `elements` draw with it. Adding a key here is a design decision, not a chore.",
+  "prefix": [],
+  "elements": ["prefix"]
+}

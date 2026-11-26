@@ -1,0 +1,23 @@
+{
+  "name": "@dqa-ai-solutions/example-cascade-4-levels",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dogfood @dqa-ai-solutions/app-runtime/cascade-ledger trên trục dọc BỐN CẤP chạy qua ONTOLOGY VÀ CỔNG KHO THẬT của kernel. App mẫu dùng từ vựng riêng (soGiao, conLai) để chứng minh engine không biết ô của app tên gì. Có phép thử đua thật bằng Promise.all — và nó ĐO ĐƯỢC rằng shim CAS ở tầng ứng dụng vẫn hở.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/run.js",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@dqa-ai-solutions/app-runtime": "*",
+    "@dqa-ai-solutions/core-runtime": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "name": "@dqa-ai-solutions/app-runtime",
+  "version": "0.1.0",
+  "description": "The app tier in one package: process runner, view layer, calendar and cascade-ledger libraries; screens at ./ui-kit and ./ui-react. Stands on @dqa-ai-solutions/core-runtime.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DQASolutions/app-runtime.git",
+    "directory": "app/app-runtime"
+  },
+  "homepage": "https://github.com/DQASolutions/app-runtime#readme",
+  "bugs": {
+    "url": "https://github.com/DQASolutions/app-runtime/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./calendar": {
+      "types": "./dist/calendar/index.d.ts",
+      "import": "./dist/calendar/index.js"
+    },
+    "./cascade-ledger": {
+      "types": "./dist/cascade-ledger/index.d.ts",
+      "import": "./dist/cascade-ledger/index.js"
+    },
+    "./ui-kit": {
+      "types": "./dist/ui-kit/index.d.ts",
+      "import": "./dist/ui-kit/index.js"
+    },
+    "./ui-kit/tokens": {
+      "types": "./dist/ui-kit/tokens.d.ts",
+      "import": "./dist/ui-kit/tokens.js"
+    },
+    "./ui-kit/primitives": {
+      "types": "./dist/ui-kit/primitives.d.ts",
+      "import": "./dist/ui-kit/primitives.js"
+    },
+    "./ui-kit/lens": {
+      "types": "./dist/ui-kit/lens.d.ts",
+      "import": "./dist/ui-kit/lens.js"
+    },
+    "./ui-kit/shell": {
+      "types": "./dist/ui-kit/shell.d.ts",
+      "import": "./dist/ui-kit/shell.js"
+    },
+    "./ui-kit/tokens.css": "./dist/ui-kit/tokens.css",
+    "./ui-kit/tokens.generated.css": "./dist/ui-kit/tokens.generated.css",
+    "./ui-kit/tokens.dark.css": "./dist/ui-kit/tokens.dark.css",
+    "./ui-kit/tokens.high.css": "./dist/ui-kit/tokens.high.css",
+    "./ui-react": {
+      "types": "./dist/ui-react.d.ts",
+      "import": "./dist/ui-react.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p . && node ../../scripts/copy-assets.mjs app-runtime",
+    "test": "vitest run",
+    "lint": "tsc --noEmit && tsc -p tsconfig.check.json",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@dqa-ai-solutions/ontology-view": "^0.29.2",
+    "@dqa-ai-solutions/ui-kit": "^0.71.0",
+    "@dqa-ai-solutions/ui-react": "^0.74.0",
+    "@dqa-ai-solutions/workflow-process": "^5.12.0"
+  },
+  "devDependencies": {
+    "@dqa-ai-solutions/core-runtime": "^0.1.0",
+    "@types/node": "^25.3.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "peerDependencies": {
+    "@dqa-ai-solutions/core-runtime": "^0.1.0",
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
+}

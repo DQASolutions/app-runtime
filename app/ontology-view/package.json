@@ -1,0 +1,50 @@
+{
+  "name": "@dqa-ai-solutions/ontology-view",
+  "version": "0.29.2",
+  "description": "View-contract resolver: turns an app's view declaration + ontology + process into a flat, renderer-agnostic contract (columns, facts, queue rows, step forms) so a screen is a lens over the ontology instead of hand-written code.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DQASolutions/app-runtime.git",
+    "directory": "app/ontology-view"
+  },
+  "homepage": "https://github.com/DQASolutions/app-runtime#readme",
+  "bugs": {
+    "url": "https://github.com/DQASolutions/app-runtime/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "vitest run",
+    "lint": "tsc --noEmit && tsc -p tsconfig.check.json",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@dqa-ai-solutions/workflow-process": "^5.12.0",
+    "fs-extra": "^11.3.4",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@dqa-ai-solutions/core-runtime": "^0.1.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^25.3.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "private": true,
+  "peerDependencies": {
+    "@dqa-ai-solutions/core-runtime": "^0.1.0"
+  }
+}

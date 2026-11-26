@@ -1,0 +1,10 @@
+{
+  "//": "Functions compile in place (decision A) AND src compiles to dist (run.ts) — track both as inputs/outputs so the cache is correct.",
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "inputs": ["src/**", "app/functions/**/*.ts", "app/functions/tsconfig.json", "tsconfig*.json", "package.json"],
+      "outputs": ["dist/**", "app/functions/*.js"]
+    }
+  }
+}

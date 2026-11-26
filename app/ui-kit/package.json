@@ -1,0 +1,63 @@
+{
+  "name": "@dqa-ai-solutions/ui-kit",
+  "version": "0.71.0",
+  "description": "The runtime half of a screen: token TYPES, the CSS a theme was generated into (tokens*.css), the five states every data surface must answer, action tiers, and view-models that turn a ViewContract into what to draw.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DQASolutions/app-runtime.git",
+    "directory": "app/ui-kit"
+  },
+  "homepage": "https://github.com/DQASolutions/app-runtime#readme",
+  "bugs": {
+    "url": "https://github.com/DQASolutions/app-runtime/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./tokens": {
+      "types": "./dist/tokens/index.d.ts",
+      "import": "./dist/tokens/index.js"
+    },
+    "./primitives": {
+      "types": "./dist/primitives/index.d.ts",
+      "import": "./dist/primitives/index.js"
+    },
+    "./lens": {
+      "types": "./dist/lens/index.d.ts",
+      "import": "./dist/lens/index.js"
+    },
+    "./shell": {
+      "types": "./dist/shell/index.d.ts",
+      "import": "./dist/shell/index.js"
+    },
+    "./tokens.css": "./dist/tokens.css",
+    "./tokens.generated.css": "./dist/tokens.generated.css",
+    "./tokens.dark.css": "./dist/tokens.dark.css",
+    "./tokens.high.css": "./dist/tokens.high.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p . && cp src/*.css dist/",
+    "test": "vitest run",
+    "lint": "tsc -p tsconfig.lint.json",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "@dqa-ai-solutions/ontology-view": "^0.29.0"
+  },
+  "devDependencies": {
+    "@dqa-ai-solutions/ontology-view": "^0.29.0",
+    "@types/node": "^25.3.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "private": true
+}

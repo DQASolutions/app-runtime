@@ -1,0 +1,7 @@
+{
+  "_": "The layer rule, kept as DATA so the check tool and the humans read the same list. One direction, no exceptions. Adding a key here is a design decision, not a chore.",
+  "tokens": [],
+  "primitives": ["tokens"],
+  "lens": ["tokens", "primitives"],
+  "shell": ["tokens", "primitives", "lens"]
+}

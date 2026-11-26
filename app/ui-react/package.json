@@ -1,0 +1,42 @@
+{
+  "name": "@dqa-ai-solutions/ui-react",
+  "version": "0.74.0",
+  "description": "The React half of a screen. @dqa-ai-solutions/ui-kit decides what an element must be; this draws it — the right tag, the right ARIA, focus and keyboard. Owns no decision and no colour: every class it writes is one the kit already emitted CSS for.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "vitest run",
+    "lint": "tsc -p tsconfig.lint.json",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "@dqa-ai-solutions/ui-kit": "^0.71.0",
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@dqa-ai-solutions/core-runtime": "^0.1.0",
+    "@dqa-ai-solutions/ui-kit": "^0.71.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^25.3.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.3.0",
+    "esbuild": "^0.27.0",
+    "happy-dom": "^20.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "private": true
+}

@@ -1,0 +1,43 @@
+{
+  "name": "@dqa-ai-solutions/workflow-process",
+  "version": "5.12.0",
+  "description": "Business-process runner: a state machine over records, not a DAG over a run. Progress is a value on the record; every step writes in one transaction through the ontology Action ledger. Peer to @dqa-ai-solutions/workflow-engine, which runs agent plans.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DQASolutions/app-runtime.git",
+    "directory": "app/workflow-process"
+  },
+  "homepage": "https://github.com/DQASolutions/app-runtime#readme",
+  "bugs": {
+    "url": "https://github.com/DQASolutions/app-runtime/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "vitest run",
+    "lint": "tsc --noEmit && tsc -p tsconfig.check.json",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^25.3.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "private": true
+}
