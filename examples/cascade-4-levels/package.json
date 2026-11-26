@@ -12,8 +12,9 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@dqa-ai-solutions/app-runtime": "*",
-    "@dqa-ai-solutions/core-runtime": "*"
+    "@dqa-ai-solutions/app-runtime": "^0.2.0",
+    "@dqa-ai-solutions/core-runtime": "^0.2.0",
+    "@dqa-ai-solutions/ontology-runtime": "^0.2.0"
   },
   "devDependencies": {
     "@types/node": "^25.3.5",

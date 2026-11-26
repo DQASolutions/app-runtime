@@ -23,35 +23,12 @@
 // ═══════════════════════════════════════════════════════════════════════════
 
 import type { Process, Transition } from './types.js'
+import { TASK_CATEGORIES, ENTRY_MODES, OFF_SYSTEM_RECORDS } from '@dqa-ai-solutions/core-runtime/view'
+import type { TaskCategory, EntryMode, OffSystemRecord, TaskIteration, TaskDecl, ReadersDecl } from '@dqa-ai-solutions/core-runtime/view'
 
-/** Who does the step: a person on the software · the software alone · a person away from it. */
-export const TASK_CATEGORIES = ['interaction', 'system', 'user'] as const
-export type TaskCategory = (typeof TASK_CATEGORIES)[number]
-
-/** How a field gets its value: typed by a person · filled by the software · proposed by it, confirmed by a person. */
-export const ENTRY_MODES = ['interaction', 'system', 'suggested'] as const
-export type EntryMode = (typeof ENTRY_MODES)[number]
-
-/** What a step done away from the software leaves: a signed paper (number, date, scan) · only a result. */
-export const OFF_SYSTEM_RECORDS = ['document', 'outcome'] as const
-export type OffSystemRecord = (typeof OFF_SYSTEM_RECORDS)[number]
-
-/** One record · many records at once · many lines of one field inside one record. */
-export type TaskIteration = 'single' | 'records' | { rows: string }
-
-export interface TaskDecl {
-  category?: TaskCategory
-  iteration?: TaskIteration
-  /** Fields the person must see to do the step, beyond the record itself. */
-  reads?: string[]
-  /** Every field the step records → how it gets its value. */
-  filledBy?: Record<string, EntryMode>
-  /** Only for `category: user`. */
-  leaves?: OffSystemRecord
-}
-
-/** Per state: roles that may see a record there without being able to act on it. */
-export type ReadersDecl = Record<string, string[]>
+// The vocabulary itself is shared with the screen and lives in the core.
+export { TASK_CATEGORIES, ENTRY_MODES, OFF_SYSTEM_RECORDS }
+export type { TaskCategory, EntryMode, OffSystemRecord, TaskIteration, TaskDecl, ReadersDecl }
 
 export interface TaskFault {
   process: string

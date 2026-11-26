@@ -4,7 +4,7 @@
 //    thành một số đo: viết shim ở tầng ứng dụng thì KHÔNG chặn được, vì giữa
 //    "đọc" và "ghi" luôn có một `await`, và Node nhả sự kiện đúng ở đó.
 
-import { InMemoryAdapter, createOntology, type Ctx, type Provenance, type OntologySchema } from '@dqa-ai-solutions/core-runtime'
+import { InMemoryAdapter, createOntology, type Ctx, type Provenance, type OntologySchema } from '@dqa-ai-solutions/ontology-runtime'
 import type { InstancePort } from '@dqa-ai-solutions/app-runtime/cascade-ledger'
 
 export const CTX: Ctx = { tenantId: 'demo', actor: 'ROLE-HEAD' }

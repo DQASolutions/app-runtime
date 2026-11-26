@@ -1,8 +1,8 @@
 {
   "name": "app-runtime-workspace",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Source of @dqa-ai-solutions/app-runtime. The app tier in one package: process runner, view layer, calendar and cascade-ledger libraries; screens at ./ui-kit and ./ui-react. Stands on @dqa-ai-solutions/core-runtime.",
+  "description": "Source of @dqa-ai-solutions/app-runtime. The app tier, server side: process runner, view resolver and loaders, calendar and cascade-ledger libraries. Stands on @dqa-ai-solutions/core-runtime; screens are @dqa-ai-solutions/ui-runtime.",
   "license": "Apache-2.0",
   "type": "module",
   "workspaces": [
@@ -18,7 +18,8 @@
   "devDependencies": {
     "turbo": "^2.3.0",
     "typescript": "^5.9.3",
-    "@dqa-ai-solutions/core-runtime": "^0.1.0"
+    "@dqa-ai-solutions/core-runtime": "^0.2.0",
+    "@dqa-ai-solutions/ontology-runtime": "^0.2.0"
   },
   "engines": {
     "node": ">=20"
